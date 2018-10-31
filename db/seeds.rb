@@ -20,7 +20,7 @@ end
 # 	)
 # end
 
-puts "3 Topics created"
+puts "#{topics.count} Topics created"
 
 10.times do |blog|
 	Blog.create!(
@@ -97,3 +97,13 @@ end
 end
 
 puts "9 portfolio items created"
+
+technologies = ["Ruby", "Lisp", "Comlicated"]
+
+technologies.each do |technology|
+	Portfolio.last.technologies.create!(
+		name: "#{technology}"		
+	)
+end
+
+puts "#{technologies.count} technologies created"
