@@ -67,8 +67,8 @@ puts "5 skills created"
 			eum iure reprehenderit qui in ea voluptate velit esse quam 
 			nihil molestiae consequatur, vel illum qui dolorem eum fugiat 
 			quo voluptas nulla pariatur?",
-		main_image: "https://via.placeholder.com/600x400",
-		thumb_image: "https://via.placeholder.com/300x200"
+		# main_image: "https://via.placeholder.com/600x400",
+		# thumb_image: "https://via.placeholder.com/300x200"
 	)
 end
 
@@ -91,8 +91,8 @@ end
 			eum iure reprehenderit qui in ea voluptate velit esse quam 
 			nihil molestiae consequatur, vel illum qui dolorem eum fugiat 
 			quo voluptas nulla pariatur?",
-		main_image: "https://via.placeholder.com/600x400",
-		thumb_image: "https://via.placeholder.com/300x200"
+		# main_image: "https://via.placeholder.com/600x400",
+		# thumb_image: "https://via.placeholder.com/300x200"
 	)
 end
 
