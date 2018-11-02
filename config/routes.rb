@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :portfolios, except: [:show]
+
+  get 'math-integrals-items', to: 'portfolios#math_integrals'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   
   get 'about-me', to: 'pages#about'

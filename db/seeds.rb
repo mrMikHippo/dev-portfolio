@@ -6,6 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+topics = ["Ruby", "Python", "Math"]
+
+topics.each do |topic|
+	Topic.create!(
+		title: "Topic #{topic}"
+	)
+end
+
+# 3.times do |topic|
+# 	Topic.create!(
+# 		title: "#{topic}"
+# 	)
+# end
+
+puts "#{topics.count} Topics created"
+
 10.times do |blog|
 	Blog.create!(
 		title: "My blog post #{blog}",
@@ -16,7 +32,8 @@
 			irure dolor in reprehenderit in voluptate velit esse cillum 
 			dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
 			cupidatat non proident, sunt in culpa qui officia deserunt 
-			mollit anim id est laborum."
+			mollit anim id est laborum.",
+		topic_id: Topic.last.id
 	)
 end
 
@@ -31,10 +48,10 @@ end
 
 puts "5 skills created"
 
-9.times do |portfoliio_item|
+8.times do |portfoliio_item|
 	Portfolio.create!(
 		title: "Portfolio title: #{portfoliio_item}",
-		subtitle: "My great serves",
+		subtitle: "Ruby on Rails",
 		body: "Sed ut perspiciatis unde omnis iste natus error sit 
 			voluptatem accusantium doloremque laudantium, totam rem aperiam, 
 			eaque ipsa quae ab illo inventore veritatis et quasi architecto 
@@ -50,9 +67,43 @@ puts "5 skills created"
 			eum iure reprehenderit qui in ea voluptate velit esse quam 
 			nihil molestiae consequatur, vel illum qui dolorem eum fugiat 
 			quo voluptas nulla pariatur?",
-		main_image: "https://via.placeholder.com/600x400",
-		thumb_image: "https://via.placeholder.com/300x200"
+		# main_image: "https://via.placeholder.com/600x400",
+		# thumb_image: "https://via.placeholder.com/300x200"
+	)
+end
+
+1.times do |portfoliio_item|
+	Portfolio.create!(
+		title: "Portfolio title: #{portfoliio_item}",
+		subtitle: "Math Integrals",
+		body: "Sed ut perspiciatis unde omnis iste natus error sit 
+			voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+			eaque ipsa quae ab illo inventore veritatis et quasi architecto 
+			beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+			quia voluptas sit aspernatur aut odit aut fugit, sed quia 
+			consequuntur magni dolores eos qui ratione voluptatem sequi 
+			nesciunt. Neque porro quisquam est, qui dolorem ipsum quia 
+			dolor sit amet, consectetur, adipisci velit, sed quia non 
+			numquam eius modi tempora incidunt ut labore et dolore magnam 
+			aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
+			nostrum exercitationem ullam corporis suscipit laboriosam, 
+			nisi ut aliquid ex ea commodi consequatur? Quis autem vel 
+			eum iure reprehenderit qui in ea voluptate velit esse quam 
+			nihil molestiae consequatur, vel illum qui dolorem eum fugiat 
+			quo voluptas nulla pariatur?",
+		# main_image: "https://via.placeholder.com/600x400",
+		# thumb_image: "https://via.placeholder.com/300x200"
 	)
 end
 
 puts "9 portfolio items created"
+
+technologies = ["Ruby", "Lisp", "Comlicated"]
+
+technologies.each do |technology|
+	Portfolio.last.technologies.create!(
+		name: "#{technology}"		
+	)
+end
+
+puts "#{technologies.count} technologies created"
