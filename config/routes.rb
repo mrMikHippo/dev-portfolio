@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show]
 
   get 'math-integrals-items', to: 'portfolios#math_integrals'
