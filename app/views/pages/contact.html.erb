@@ -1,2 +1,6 @@
 <h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<!-- https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html -->
+<p><%= number_to_phone "9094567890", area_code: true, country_code: 7 %></p>
+<p><%= number_to_currency "1500", precision: 0 %></p>
+<p><%= number_to_percentage "80.4", precision: 1 %></p>
+<p><%= number_with_delimiter "150012314535435" %></p>

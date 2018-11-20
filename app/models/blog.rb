@@ -5,5 +5,10 @@ class Blog < ApplicationRecord
 
 	validates_presence_of :title, :body
 
-	belongs_to :topic
+	# 'belongs_to' behavior has changed in rails >= 5.x.
+	# Essentually it is now expected that the belongs_to record exists
+	# before assigning it to the other side of association.
+	# You need to pass 'required :false' while declaring 'belongs_to'
+	# in Blog model
+	belongs_to :topic, required: false
 end
