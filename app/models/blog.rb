@@ -11,4 +11,12 @@ class Blog < ApplicationRecord
 	# You need to pass 'required :false' while declaring 'belongs_to'
 	# in Blog model
 	belongs_to :topic, required: false
+
+	def self.special_blogs
+		all
+	end
+
+	def self.featured_blogs
+		limit(2)
+	end
 end
