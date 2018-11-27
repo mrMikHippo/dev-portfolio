@@ -59,3 +59,5 @@ gem 'friendly_id', '~> 5.2.0'
 gem 'devise', '~> 4.5'
 
 gem 'bootstrap', '~> 4.1.3'
+
+gem 'hippo_view_tool', git: 'https://github.com/mrMikHippo/hippo_view_tool'
