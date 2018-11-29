@@ -1,7 +1,7 @@
 <%= image_tag @portfolio_item.main_image %>
 
 <h1><%= @portfolio_item.title %></h1>
-<p><%= link_to "Edit", edit_portfolio_path(@portfolio_item.id) %></p>
+<p><%= link_to "Edit", edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %></p>
 
 <em><%= @portfolio_item.subtitle %></em>
 
