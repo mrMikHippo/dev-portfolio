@@ -1,6 +1,22 @@
-<h1>Pages#contact</h1>
+<h1>Would you like to work together?</h1>
 <!-- https://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html -->
-<p><%= number_to_phone "9094567890", area_code: true, country_code: 7 %></p>
-<p><%= number_to_currency "1500", precision: 0 %></p>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-6">
+		<h3>Office Address</h3>
+		<p>The World</p>
+		<h3>Phone</h3>
+		<p><%= number_to_phone "0123456789", area_code: true, country_code: 7 %></p>
+		<h3>Email</h3>
+		<p><a href="mailto:test@test.com?subject=PortfolioCOntact" "Email me">Email me</a></p>	
+	</div>
+	<div class="col-md-6">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1299087.8412054663!2d-121.6695821340004!3d39.478021394322425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80823ad465e3e04b%3A0xf35fea2c425ee99c!2z0J3QsNGG0LjQvtC90LDQu9GM0L3Ri9C5INC30LDQv9C-0LLQtdC00L3QuNC6INCc0LXQvdC00L7RhtC40L3Qvg!5e0!3m2!1sru!2spy!4v1543825515620" width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+</div>
+
+<!-- <p><%= number_to_currency "1500", precision: 0 %></p>
 <p><%= number_to_percentage "80.4", precision: 1 %></p>
-<p><%= number_with_delimiter "150012314535435" %></p>
+<p><%= number_with_delimiter "150012314535435" %></p> -->
