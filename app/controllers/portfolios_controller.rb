@@ -7,6 +7,15 @@ class PortfoliosController < ApplicationController
 		@portfolio_items = Portfolio.by_position
 	end
 
+    def sort
+        params[:order].each do |key, value|
+            Portfolio.find(value[:id]).update(position: value[:position])
+        end
+
+        render body: nil
+        # render nothing: true # deprecated
+    end
+
 	def math_integrals
 		@math_integrals_portfolio_items = Portfolio.math_integrals
 	end
