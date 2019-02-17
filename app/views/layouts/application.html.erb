@@ -18,12 +18,28 @@
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-      <div id="background"></div>
+      <!-- The video does not play in the Safari browser
+          possible reason:
+            Safari requires webserver to support "Range" request header in order to play your media content.
+
+              https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/CreatingVideoforSafarioniPhone/CreatingVideoforSafarioniPhone.html#//apple_ref/doc/uid/TP40006514-SW6
+
+            For a legit "Range" request response, your webserve need to return status code "206".
+        -->
+          
+      <%= video_tag(
+          'HardDrivePhotojpeg.mp4',
+          id: "background",
+          autoplay: true,
+          loop: true,
+          muted: true,
+          poster: 'home_bg.png'
+        )
+        %>
 
       <%= render "shared/application_nav" %>
 
       <%= yield %>
-
       
       <%= render "shared/application_footer" %>
       <%= source_helper("application") %>
